@@ -1,17 +1,25 @@
 #include <iostream>
+#include <string>
+#include <stdlib.h>
 using namespace std;
 int main() {
-	int n,a,b,c,cnt=0,tmp;
-	cin >> n;
-	if (n < 10) { a = 0; b = n; }
-	else { a = n / 10; b = n % 10; }
-	c = n;
+	string num;
+	char a, b;
+	char cc, dc;
+	cin >> num;
+	if (num.length() < 2) { a = '0'; b = num.at(0); }
+	else { a = num.at(0); b = num.at(1); }
+	int c = a-'0', d = b-'0',cnt=0;
+	cout << a << " " << b << endl;
 	do {
 		cnt++;
-		tmp = a;
-		a = b;
-		b = (tmp + b)%10;
-		c = a * 10 + b;
-	} while (n != c);
+		int tmp = c;
+		c = d;
+		d = (tmp + d)%10;
+		cout <<c<<" "<< d<<endl;
+		itoa(c, &cc, 10);
+		itoa(d, &dc, 10);
+
+	} while (a!=cc && b != dc);
 	cout << cnt;
 }
