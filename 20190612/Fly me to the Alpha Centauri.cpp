@@ -11,17 +11,7 @@ void fly(long x,long y) {
 		sw++;
 		cnt++;
 	}
-	long sum = 0;
-	for (i = 1; sum <= length; i++) { 
-		cout << sum << endl;
-		sum += i * 2;
-	}
-	i--;
-	cout <<i<<" "<< sum << endl;
-	sum = (i - 1)*i;
-	cout << sum << endl;
-	if (i <= length - sum) cout << i+i-1 << endl;
-	else cout << i+1 +i-1 <<endl;
+	cout << cnt <<endl;
 }
 int main() {
 	long num, x, y;
